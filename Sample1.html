@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script type="text/javascript" src="Sample1.js"></script>
+        <style>
+        table[id="123"]{
+          border: 2px solid indigo;
+          margin-top: 50px;
+        }
+        table{
+            border: 1px solid black;
+
+        }
+        </style>
+    </head>
+    <body></body>
+            <table align="center">
+               <tr>
+                   <th>Subject</th>
+                   <th>Marks scored</th>
+               </tr>
+               <tr>
+                   <td>Maths</td>
+                   <td><input type="number" max="100" id="mat"></td>
+               </tr>
+               <tr>
+                   <td>English</td>
+                   <td><input type="number" max="100" id="eng"></td>
+               </tr>
+               <tr>
+                    <td>Computer Science</td>
+                    <td><input type="number" max="100" id="cs"></td>
+                </tr>
+                <tr>
+                        <td ></td>
+                        <td><input type="submit" value="check result" onclick=calculateResult()></td>
+                </tr>
+            </table>
+        <table id="123" align="center"></table>
+    </body>
+
+</html>

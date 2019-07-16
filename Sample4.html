@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Calculator using inheritance</title>
+        <script type="text/javascript" src="Sample4.js"></script>
+        <style>
+        table{
+            border: 2px solid;
+            padding: 2px;
+            height: 35%;
+            width: 25%;
+            font-size: 10px;
+        }
+        tr{
+            height: 5px;
+            width: 5px;
+        }
+        input[type="button"]{
+            width: 100%;
+            height: 100%;
+            font-size: 15px;
+        }
+        input[id="clear"]
+        {
+            width: 100px;
+            height: 50px;
+        }
+        input[type="text"]{
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    height: 50px;
+                    width: 250px;
+                    font-size: 20px;
+        }
+        input[id="calc"]{
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    height: 50px;
+                    width: 130px;
+        }
+        </style>
+    </head>
+    <body>
+            <fieldset>
+                    <input type="text" id="data">
+                    <input type="button" id="calc" value="Calculate" onclick="getVal()">
+                <table>
+                    <tr>
+                    <td><input type="button" id="1" value="1" onclick="setVal(value)"></td>
+                    <td><input type="button" id="2" value="2" onclick="setVal(value)"></td>
+                    <td><input type="button" id="3" value="3" onclick="setVal(value)"></td>
+                    <td><input type="button" id="+" value="+" onclick="setVal(value)"></td>
+                    </tr>
+                    <tr>
+                    <td><input type="button" id="4" value="4" onclick="setVal(value)"></td>
+                    <td><input type="button" id="5" value="5" onclick="setVal(value)"></td>
+                    <td><input type="button" id="6" value="6" onclick="setVal(value)"></td>
+                    <td><input type="button" id="-" value="-" onclick="setVal(value)"></td>
+                    </tr>
+                    <tr>
+                    <td><input type="button" id="7" value="7" onclick="setVal(value)"></td>
+                    <td><input type="button" id="8" value="8" onclick="setVal(value)"></td>
+                    <td><input type="button" id="9" value="9" onclick="setVal(value)"></td>
+                    <td><input type="button" id="*" value="*" onclick="setVal(value)"></td>
+                    </tr>
+                    <tr>
+                    <td align="center" colspan="3"><input type="button" id="0" value="0" onclick="setVal(value)"></td>
+                    <td><input type="button" id="/" value="/" onclick="setVal(value)"></td>
+                    </tr>
+                </table><br/>
+                <input type="button" id="clear" value="Clear" onclick="document.getElementById('data').value = '';">
+            </fieldset>
+    </body>
+</html>

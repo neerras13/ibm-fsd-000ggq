@@ -1,0 +1,85 @@
+<html>
+    <head>
+                <script type="text/javascript" src="timetable.js"></script>
+            <style>
+            table
+            {
+                border: 1px solid;
+                }
+            input[type="button"]{
+                font-size: 15px;
+                width: 124px;
+                height: 23px;
+            }
+            tr{
+                
+                border: 1px solid;
+            }
+            td{
+                    padding: 5px;
+            }
+            th{
+                font-size: 18px;
+                width: 75px;
+            }
+            h1{
+                text-align: center;
+            }
+            input[id="submitc"]
+            {
+                width: auto;
+                height: auto;
+            }
+            input[type=checkbox]{
+                font-size: 18px;
+                width: 18px;
+                height: 18px;
+            }
+            </style>
+    </head>
+    <body> 
+        <h1>Timetable</h1>  
+        <fielset> 
+        <table align="center">
+                <tr>
+                <th></th>
+                <th>Subject</th>
+                <th>Trainer</th>
+                </tr>
+                <tr id="s1">                    
+                    <td><input type="button" id="slot1" class="" onclick="typeForm('s1',this.value,this.id,this.class)" value="10 A.M - 11 A.M"></td>                   
+                </tr>
+                <tr id="s2">                    
+                    <td><input type="button" id="slot2" class="" onclick="typeForm('s2',this.value,this.id,this.class)" value="11 A.M - 12 P.M"></td>
+                </tr>
+                <tr id="s3">                    
+                    <td><input type="button" id="slot3" class="" onclick="typeForm('s3',this.value,this.id,this.class)" value="12 P.M - 1 P.M"></td>             
+                </tr>
+                <tr id="s4">                    
+                    <td><input type="button" id="slot4" class="" onclick="alert('It is recess!')" value="1 P.M - 2 P.M"></td>
+                    <td colspan="2" style="text-align:center">RECESS</td>
+                    <td></td>
+                </tr>
+                <tr id="s5">                    
+                    <td><input type="button" id="slot5" class="" onclick="typeForm('s5',this.value,this.id,this.class)" value="2 P.M - 3 P.M"></td>
+                </tr>
+                <tr id="s6">                    
+                    <td><input type="button" id="slot6" class="" onclick="typeForm('s6',this.value,this.id,this.class)" value="3 P.M - 4 P.M"></td>
+                </tr>
+                <tr id="s7">                    
+                    <td><input type="button" id="slot7" class="" onclick="typeForm('s7',this.value,this.id,this.class)" value="4 P.M - 5 P.M"></td>
+                </tr>
+            </table>
+        </fielset>
+        <div id="form"></div>
+        <!--<div id="class">
+            <input type="button" id="clA" value="Class A" onclick="display(id)">
+            <input type="button" id="clB" value="Class B" onclick="display(id)"> 
+            <input type="button" id="clC" value="Class C" onclick="display(id)">
+            <input type="button" id="clD" value="Class D" onclick="display(id)">-->
+        </div>
+    </body>
+</html>
+
+
+

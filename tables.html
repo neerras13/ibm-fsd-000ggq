@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Table Styles</title>
+        <style>
+        table{
+            margin-left: 300px;
+            margin-top: 100px;
+            text-align: center;
+            width: 60%;
+            height: 40%;
+            font-size: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+            border: 1px solid black;
+        }
+        tr{
+            vertical-align: center;
+        }
+        tr[id="last"]{
+           height: 40px;
+        }
+        body{
+            background: linear-gradient(45deg, white,rgb(121, 121, 224),indigo,rgb(1, 1, 70),black);
+        }
+        body h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-top: 50px;
+        }
+        tr td select{
+            width: 173px;
+
+        }
+        td[id="radio"]{
+            color: aliceblue;
+            font-size: medium;
+        }
+        input[type="submit"]{
+            width: 157px;
+            height: 29px;
+            background: url("sprite2.jpg");
+            font-size: 0px;
+            border-radius: 50px;
+        }
+        input[type="button"]{
+            width: 157px;
+            height: 29px;
+            background: url("sprite3.png");
+            font-size: 0px;
+            border-radius: 50px;
+        }
+
+        </style>
+    </head>
+<body>
+    <h1>Application form</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td><input type="text" id="textName"></td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td id="radio"><input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female </td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td> <input type="number" max="60"></td>
+        </tr>
+        <tr>
+            <th>Post applying for</th>
+            <td>
+                <select name="Designation" >
+                <option>  Asst Systems Engineer </option>
+                <option>Project Manager</option>
+                <option>Systems Engineer</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Mobile number</th>
+            <td><input type="number" maxlength="10"></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="email"></td>
+        </tr>
+        <tr id="last">
+            <td id="sub" align="right"><input type="submit"></td>
+            <td id="res" align="left"><input type="button" value="Reset"></td>
+        </tr>
+    </table>
+</body>
+</html>

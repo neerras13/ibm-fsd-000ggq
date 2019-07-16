@@ -1,0 +1,91 @@
+<html>
+<head>
+    <style type="text/css">
+    input[type=text]{
+        border: 1px solid green; 
+        border-radius: 4px;
+        height: 2em;
+    }
+    input[type=submit]{
+        margin: 2 2 2 2px;
+        background-color: rgb(241, 165, 165);
+        font-style: inherit;
+        color: black;    
+    }
+    fieldset{
+        background-color: rgb(73, 111, 144);
+        border-color:indigo;
+        float: center;
+        margin: 10 10 10 10px;
+        width: 30%;
+        height: 30%;
+        
+    }
+    fieldset legend{
+        color:rgb(195, 248, 245);
+        font-weight: bold; 
+    }
+    nav a{
+        text-decoration: none;
+    }
+
+    nav a:hover{
+        color:lavender 
+           }
+    body{
+        background: url("image.jpg") no-repeat  ;
+        background-size: 1800px 800px;
+    }
+            
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+         &nbsp;&nbsp;&nbsp;<a href="">Home</a> <br />
+         &nbsp;&nbsp;&nbsp;<a href="">About</a><br />
+         &nbsp;&nbsp;&nbsp;<a href="">Contact us</a><br />
+        </nav>
+    </div>
+    <fieldset> <legend>User Details</legend>
+    <form name="userDetails" method="POST">
+     <table>
+         <tbody>
+             <tr>
+                <td>First Name</td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="date"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" placeholder="Work ID"></td>
+            </tr>
+            <tr>
+                    <td>Time of reg</td>
+                    <td><input type="time" name="time" ></td>
+                </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Save">  </td>
+            </tr>
+            
+        </tbody>  
+     </table>   
+    </form>
+</fieldset>
+<fieldset>
+    <legend>Fields</legend>
+    <em>Hello</em>
+    <bdo dir="ltr">Hello </bdo>
+    <hr />
+    <blockquote>what is life</blockquote>
+</fieldset>
+</body>
+    </html>
