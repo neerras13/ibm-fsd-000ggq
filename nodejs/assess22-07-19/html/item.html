@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script type="text/javascript" src="item.js">
+        </script>
+        <style>
+        select, input{
+        display: block;
+        }
+        
+        
+        </style>
+    </head>
+    <body onload="trainlist()">
+        <h1 align="center">Select items to buy</h1><br /><br /><br />
+        <fieldset>
+    User Id: <input type="text" id="uid">
+    Category: <select id="listt" onchange='itemlist()'><option id="cate">Select category</option></select>
+    Products in category: <select id="itlist"><option id="prod">Select Products</option></select>                   
+    Quantity: <input type="number" id="quantity">
+    <input type="submit" value="Add to cart" onclick="additem()">
+    </select>
+    </fieldset>
+    <div id="select"><br /><br /></div>
+    </body>
+</html>

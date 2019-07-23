@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            const login = ()=>{
+            const email = document.getElementById('email').value;                                                                                                       const check=1;
+            const pass = document.getElementById('pass').value;
+            const _url = `http://localhost:1234/login?email=${email}&pass=${pass}`;
+            
+            fetch(_url,{
+                method: 'GET'
+            })
+            .then(response => {
+            return response.json();
+            })
+            .then((resp)=>{
+            /*if(resp.email)
+            {
+                document.location = 'item.html'
+            }
+            else*/
+            alert("invalid credentials");
+            });
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Login</h1>
+        <input type='text' id='email' placeholder="Email"><br />
+        <input type='password' id='pass' placeholder="Password"><br />
+        <input type="submit" id='login' value='Login' onclick="login()"><br />
+    </body>
+    </html>
+</html>
