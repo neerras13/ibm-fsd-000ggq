@@ -1,0 +1,1 @@
+const private_key = 'myPrivateKey';
