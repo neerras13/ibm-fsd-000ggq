@@ -6,16 +6,15 @@ class Service
     login(email,pass){
         this.email =email;
         this.pass =pass;
-        let a;
         for(let i=0;i<2;i++){
             if(users[i][0] == email && users[i][1] == pass){
-                 a=users[i][0];
+                 this.a=users[i][0];
               }
               else{
-                  a=''; 
+                  this.a=''; 
               }
         }
-        return a;
+        return this.a;
     }
     modify(item,quantity)
     {

@@ -8,10 +8,13 @@ const cors = require('cors');
 server.use(cors());
 
 
-server.get('/login',(req,res)=>{
+server.post('/login',(req,res)=>{
     res.setHeader('content-type','application/json');
-    res.end(service.login(req.params.email,req.params.pass));
-});
+    res.end(JSON.stringify({
+    data : service.login(req.body.email,req.body.pass)
+    }) )
+} );
+
 
 server.get('/item',(req,res)=>{
     res.setHeader('content-type','application/json');
