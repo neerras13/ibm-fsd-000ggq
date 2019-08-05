@@ -1,32 +1,35 @@
 const users = require('../dbs/users').users;
-const items=require('../dbs/items').Clothes;
+const items=require('../dbs/items').items;
 
 class Service
 {
-    login(email,pass){
-        this.email =email;
-        this.pass =pass;
-        for(let i=0;i<2;i++){
-            if(users[i][0] == email && users[i][1] == pass){
-                 this.a=users[i][0];
-              }
-              else{
-                  this.a=''; 
-              }
+    login(email,pass)
+    {
+        return users.find((u)=>{
+                return u.email == email && u.pass == pass
+            });
         }
-        return this.a;
-    }
+
+    
     modify(item,quantity)
     {
         this.quantity=quantity;
         this.item = item;
-        items.forEach(u).find(()=>{
+        items.forEach((it)=>{
+        it.find((u)=>{
             if(u.item == item)
             {
                 u.qAvail = u.qAvail-quantity;
+                return u.item;
             }
         })
+    });
     }
 }
 
 module.exports.Service = Service;
+
+
+
+
+

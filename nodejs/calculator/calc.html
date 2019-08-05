@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function action(){
+                let email = document.getElementById("email").value;
+                let pass = document.getElementById("pass").value;
+                const url = "http://localhost:1234/login";
+                fetch(url,{
+                    method: "POST"
+                })
+                .then(res=>res.json())
+                .then(data=>{
+                    alert(data);
+                })
+            }
+                </script>
+    </head>
+    <body style="display: block">
+        <h1 align="center">Login</h1>
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="pass" placeholder="password">
+        <input type="button" onclick="action()">
+    </body>
+</html>

@@ -52,11 +52,15 @@ function additem(){
     const quantity=document.getElementById("quantity").value;
     localStorage.setItem(`${uid}`,`{item: ${item},quantity: ${quantity}}`);
     document.getElementById("select").innerHTML = `<input type="text" value="Cart Items=${selected}" readonly>`
-    const url="http://localstorage:1234/item";
+    const url=`http://localhost:1234/modify?itlist=${item}&quantity=${quantity}`;
     fetch(url,{
         method: 'GET'
     })
-    .then(res=>res.json());
+    .then(res=>res.json())
+    .then((data)=>{
+        alert("Item added to cart");
+
+    });
 }
 
 

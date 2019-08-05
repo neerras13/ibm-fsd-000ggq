@@ -4,16 +4,30 @@ const server = express();
 //const users = require('./dbs/users').users;
 const serv = require('./services/user-service').Service;
 const service=new serv();
+const parser=require('body-parser');
 const cors = require('cors');
 server.use(cors());
+server.use(parser.json());
 
 
-server.post('/login',(req,res)=>{
+server.get('/login',(req,res)=>{
     res.setHeader('content-type','application/json');
+    const data = service.login(req.query.email,req.query.pass);
+    if(data != null || data != undefined)
+    res.end(JSON.stringify(data));
+    else
     res.end(JSON.stringify({
-    data : service.login(req.body.email,req.body.pass)
-    }) )
-} );
+        email: null,
+        pass:null
+    }))
+ } );
+
+ server.get('/modify',(req,res)=>{
+    res.setHeader('content-type','application/json');
+    res.end(JSON.stringify(service.modify(req.query.itlist,req.query.quantity)));
+    
+ } );
+
 
 
 server.get('/item',(req,res)=>{
@@ -23,6 +37,6 @@ server.get('/item',(req,res)=>{
 });
    
 
-server.listen(1234,()=>{
+server.listen(7890,()=>{
     console.log("Server is running");
 });

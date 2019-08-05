@@ -2,25 +2,22 @@
     <head>
         <script type="text/javascript">
             const login = ()=>{
-            const email = document.getElementById('email').value;                                                                                                       const check=1;
+            const email = document.getElementById('email').value;                                                                                                       
             const pass = document.getElementById('pass').value;
-            const _url = `http://localhost:1234/login?email=${email}&pass=${pass}`;
+            const _url = `http://localhost:7890/login?email=${email}&pass=${pass}`;
             
-            fetch(_url,{
-                method: 'GET'
-            })
-            .then(response => {
-            return response.json();
-            })
-            .then((resp)=>{
-            if(check)
+            fetch(_url)
+            .then(response =>response.json())
+            .then((res)=>{
+            alert(res.email);
+            if(res.email != null)
             {
                 document.location = 'item.html'
             }
             else
             alert("invalid credentials");
-            });
-        }
+        });
+    }
         </script>
     </head>
     <body>
