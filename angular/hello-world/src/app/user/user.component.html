@@ -1,0 +1,22 @@
+<p>user works!</p>
+<b>{{ message }}</b>
+<div *ngFor="let a of users">
+{{a}}
+</div>
+<div *ngIf="valid then yes; else none;"></div>
+<ng-template #yes>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of employees">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.email}}</td>
+        </tr>
+    </tbody>
+</table>
+</ng-template>
